@@ -6,7 +6,7 @@
 item_price = 8.50
 shipping = 4.00
 subtotal = item_price + shipping
-print(f"Your subtotal is ${subtotal}")
+print(f"Your subtotal is ${subtotal:.2f}")
 
 ##################################################################################
 
@@ -21,7 +21,7 @@ bill_total = 60.00
 
 share = bill_total / people
 
-print(f"Each person pays ${share}")
+print(f"Each person pays ${share:.2f}")
 
 ######################################################################################
 
@@ -38,4 +38,4 @@ bonus = 100
 
 total_pay = regular_pay + bonus
 
-print(f"Total pay: ${total_pay}")
+print(f"Total pay: ${total_pay:.2f}")
