@@ -1,5 +1,5 @@
 '''
-The lack of logical operators forces this program to assume a compliant, and knowledgeable user acting in good faith.
+The lack of logical operators forces this program to assume a compliant and knowledgeable user acting in good faith.
 As such I do not attempt any form of error handling, or user constaints / input cleaning.
 I find this frustrating, and ultimately have kind of just assumed that the goal is that they must buy any
 quantity of 3 unique items, and that makes this feel a lot more senseible.
@@ -113,14 +113,14 @@ print()
 print()
 
 print(f"Your cart is now full.")
-print(f"Your final total including tax is ${cart_subtotal:.2f}")
 print()
 print()
 print("You bought the following items.")
-print(f"Item 1: {item_1_Quantity} {item_1_Name}, at ${item_1_Cost:.2f}")
-print(f"Item 2: {item_2_Quantity} {item_2_Name}, at ${item_2_Cost:.2f}")
-print(f"Item 1: {item_3_Quantity} {item_3_Name}, at ${item_3_Cost:.2f}")
+print(f"Item 1: {item_1_Quantity} {item_1_Name}, at ${item_1_Cost:.2f} each.")
+print(f"Item 2: {item_2_Quantity} {item_2_Name}, at ${item_2_Cost:.2f} each.")
+print(f"Item 1: {item_3_Quantity} {item_3_Name}, at ${item_3_Cost:.2f} each.")
 print()
+print(f"Your final total including tax is ${cart_subtotal:.2f}")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 ###############################################################################
