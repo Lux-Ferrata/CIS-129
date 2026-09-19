@@ -1,11 +1,11 @@
-'''
+"""
 The lack of logical operators forces this program to assume a compliant and knowledgeable user acting in good faith.
 As such I do not attempt any form of error handling, or user constaints / input cleaning.
 I find this frustrating, and ultimately have kind of just assumed that the goal is that they must buy any
 quantity of 3 unique items, and that makes this feel a lot more senseible.
-'''
+"""
 
-print('''
+print("""
 
 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -29,12 +29,12 @@ Greetings and Welcome to the Fintastic Shopping Center.
 
           You are REQUIRED to buy 3 items.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-''')
+""")
 
-'''
-I have grouped each item processing into blocks 
+"""
+I have grouped each item processing into blocks
 where possible to keep logic locally located
-'''
+"""
 
 ###############################################################################
 # Item 1
@@ -47,10 +47,10 @@ item_1_Cost = item_1_Price * item_1_Quantity
 item_1_Subtotal = (item_1_Cost * 0.05) + item_1_Cost
 
 # Even though its not strictly needed, I wrapped this in a float to indicate
-# that its output MUST remain a float or else it will break other parts of the 
+# that its output MUST remain a float or else it will break other parts of the
 # program to other maintainers. A normal comment might be.
- 
-# Variable is used in fstrings and must be a float 
+
+# Variable is used in fstrings and must be a float
 cart_subtotal = float(item_1_Subtotal)
 
 print()
@@ -77,7 +77,7 @@ item_2_Price = float(input("Please enter the price of that item: $"))
 item_2_Cost = item_2_Price * item_2_Quantity
 item_2_Subtotal = (item_2_Cost * 0.05) + item_2_Cost
 
-# Variable is used in fstrings and must be a float 
+# Variable is used in fstrings and must be a float
 cart_subtotal = float(item_1_Subtotal + item_2_Subtotal)
 
 print()
@@ -105,21 +105,22 @@ item_3_Price = float(input("Please enter the price of that item: $"))
 item_3_Cost = item_3_Price * item_3_Quantity
 item_3_Subtotal = (item_3_Cost * 0.05) + item_3_Cost
 
-# Variable is used in fstrings and must be a float 
+# Variable is used in fstrings and must be a float
 cart_subtotal = float(item_1_Subtotal + item_2_Subtotal + item_3_Subtotal)
 
 print()
 print()
 print()
 
-print(f"Your cart is now full.")
-print()
+print("Your cart is now full.")
 print()
 print("You bought the following items.")
-print(f"Item 1: {item_1_Quantity} {item_1_Name}, at ${item_1_Cost:.2f} each.")
-print(f"Item 2: {item_2_Quantity} {item_2_Name}, at ${item_2_Cost:.2f} each.")
-print(f"Item 1: {item_3_Quantity} {item_3_Name}, at ${item_3_Cost:.2f} each.")
+print(f"Item 1: {item_1_Quantity} {item_1_Name}, at ${item_1_Cost:.2f} each. For a total price of ${item_1_Quantity * item_1_Cost:.2f}")
+print(f"Item 2: {item_2_Quantity} {item_2_Name}, at ${item_2_Cost:.2f} each. For a total price of ${item_2_Quantity * item_2_Cost:.2f}")
+print(f"Item 1: {item_3_Quantity} {item_3_Name}, at ${item_3_Cost:.2f} each. For a total price of ${item_3_Quantity * item_3_Cost:.2f}")
 print()
+print(f"Your pre-subtax total is ${cart_subtotal - (cart_subtotal * 0.05):.2f}")
+print(f"Your total tax paid is ${cart_subtotal * 0.05:.2f}")
 print(f"Your final total including tax is ${cart_subtotal:.2f}")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
@@ -131,7 +132,7 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print()
 print()
 print()
-print('''
+print("""
              Have a Fintastic day!
 
 
@@ -146,4 +147,5 @@ print('''
 ⠀⠀⠀⣿⣷⠋⠀⠀⠀⠀⠀⠙⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠢⡀⠀⠙⠙⠊⠠⠲⣢⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠈⣁⡀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠀⠀⠀⠀⠤⠳⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠑⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-''')
+""")
+
